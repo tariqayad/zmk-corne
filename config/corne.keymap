@@ -141,9 +141,9 @@
 
             display-name = "Num Arrows";
             bindings = <
-&kp TAB    &kp N1        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp HOME      &kp N6     &kp N7          &kp N8          &kp N9     &kp N0     &kp BSPC
-&kp LCTRL  &kp DEL       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp END       &trans     &trans          &kp UP_ARROW    &trans     &kp PG_UP  &trans
-&kp LSHFT  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp PG_DN  &trans
+&kp TAB    &kp N1        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp HOME      &kp N6     &kp N7          &kp UP_ARROW    &kp N9           &kp PAGE_UP    &kp BSPC
+&kp LCTRL  &kp DEL       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp END       &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN  &trans
+&kp LSHFT  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT        &kp PG_DN      &trans
                                        &kp LGUI      &to 0         &kp SPACE     &kp ENTER  &tog 2          &trans
             >;
         };
