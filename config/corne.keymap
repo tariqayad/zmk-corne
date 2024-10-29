@@ -141,7 +141,7 @@
 
             display-name = "Num Arrows";
             bindings = <
-&kp TAB    &kp KP_DIVIDE    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS     &kp PAGE_UP  &trans          &kp UP_ARROW    &trans           &kp PAGE_DOWN  &kp DELETE
+&kp TAB    &kp KP_DIVIDE    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS     &kp PAGE_UP  &none           &kp UP_ARROW    &none            &kp PAGE_DOWN  &kp DELETE
 &kp LCTRL  &kp KP_MULTIPLY  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS      &kp HOME     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END        &kp C_MENU
 &kp LSHFT  &kp NUMBER_0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans       &none           &none           &none            &none          &trans
                                           &kp LGUI      &to 0         &kp SPACE     &kp ENTER    &tog 2          &trans
