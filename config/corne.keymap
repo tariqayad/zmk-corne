@@ -61,6 +61,11 @@
             bindings = <&kp RIGHT_SHIFT>;
             key-positions = <19 20>;
         };
+
+        lefftShift {
+            bindings = <&kp LSHFT>;
+            key-positions = <16 15>;
+        };
     };
 
     macros {
