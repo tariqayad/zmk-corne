@@ -111,6 +111,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        stickyTapHold: stickyTapHold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "STICKYTAPHOLD";
+            bindings = <&mo>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -125,10 +134,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y                  &kp U              &kp I          &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H                  &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N                  &kp M              &kp COMMA      &kp DOT  &kp FSLH  &tapKeyPressHoldMomLayer 3 ESCAPE
-                         &kp LGUI  &mo 2  &kp SPACE    &mt RIGHT_SHIFT ENTER  &layerTapHold 1 1  &kp RIGHT_ALT
+&kp TAB         &kp Q  &kp W  &kp E                      &kp R  &kp T        &kp Y                  &kp U              &kp I          &kp O    &kp P     &kp BSPC
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D                      &kp F  &kp G        &kp H                  &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z  &kp X  &kp C                      &kp V  &kp B        &kp N                  &kp M              &kp COMMA      &kp DOT  &kp FSLH  &tapKeyPressHoldMomLayer 3 ESCAPE
+                              &stickyTapHold 1 LEFT_WIN  &mo 2  &kp SPACE    &mt RIGHT_SHIFT ENTER  &layerTapHold 1 1  &kp RIGHT_ALT
             >;
         };
 
@@ -141,10 +150,10 @@
 
             display-name = "Num Arrows";
             bindings = <
-&kp TAB    &kp KP_DIVIDE    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS     &kp PAGE_UP  &none           &kp UP_ARROW    &none            &kp PAGE_DOWN  &kp DELETE
-&kp LCTRL  &kp KP_MULTIPLY  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS      &kp HOME     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END        &kp C_MENU
-&kp LSHFT  &kp NUMBER_0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans       &none           &none           &none            &none          &trans
-                                          &kp LGUI      &to 0         &kp SPACE     &kp ENTER    &tog 2          &trans
+&kp TAB  &kp KP_DIVIDE    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS     &kp PAGE_UP  &none           &kp UP_ARROW    &none            &kp PAGE_DOWN  &kp DELETE
+&trans   &kp KP_MULTIPLY  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS      &kp HOME     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END        &kp C_MENU
+&trans   &kp NUMBER_0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans       &none           &none           &none            &none          &trans
+                                        &kp LGUI      &to 0         &kp SPACE     &kp ENTER    &tog 2          &trans
             >;
         };
 
@@ -157,10 +166,10 @@
 
             display-name = "Special";
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR      &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp DEL
-&kp LCTRL  &kp F1    &kp F2  &kp F3    &kp QUESTION  &kp TILDE    &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &kp F4    &kp F5  &kp F6    &trans        &trans       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &to 1         &kp SPACE    &kp RET    &tog 3     &trans
+&kp TAB  &kp EXCL  &kp AT  &kp HASH  &kp DLLR      &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp DEL
+&trans   &kp F1    &kp F2  &kp F3    &kp QUESTION  &kp TILDE    &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
+&trans   &kp F4    &kp F5  &kp F6    &trans        &trans       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
+                           &kp LGUI  &to 1         &kp SPACE    &kp RET    &tog 3     &trans
             >;
         };
 
@@ -169,21 +178,10 @@
 &trans  &kp F1  &kp F2  &kp F3  &kp F4   &kp F5     &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &trans  &kp F6  &kp F7  &kp F8  &kp F9   &kp F10    &trans  &trans  &kp F5  &kp F5   &trans   &trans
 &trans  &trans  &trans  &trans  &kp F11  &kp F12    &trans  &trans  &trans  &trans   &trans   &trans
-                        &trans  &to 2    &trans     &trans  &tog 4  &trans
+                        &trans  &to 2    &trans     &trans  &tog 0  &trans
             >;
 
             label = "Functions";
-        };
-
-        numpad {
-            bindings = <
-&trans  &kp N7  &kp N8  &kp N9  &kp MINUS  &kp KP_DIVIDE      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp N4  &kp N5  &kp N6  &kp PLUS   &kp KP_MULTIPLY    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp N0  &kp N1  &kp N3  &kp DOT    &kp KP_EQUAL       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &to 3      &trans             &trans  &to 5   &trans
-            >;
-
-            label = "Num Pad";
         };
 
         colemakdh {
@@ -191,7 +189,7 @@
 &trans  &kp Q  &kp W  &kp F   &kp P  &kp G        &kp J      &kp L  &kp U      &kp Y    &trans    &trans
 &trans  &kp A  &kp R  &kp S   &kp T  &kp D        &kp H      &kp N  &kp E      &kp I    &kp O     &trans
 &trans  &kp Z  &kp X  &kp C   &kp V  &kp B        &kp K      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &trans
-                      &trans  &to 4  &kp SPACE    &kp ENTER  &to 6  &trans
+                      &trans  &to 0  &kp SPACE    &kp ENTER  &to 5  &trans
             >;
 
             label = "Colemak-Dh";
@@ -199,22 +197,13 @@
 
         config {
             bindings = <
-&bootloader  &kp CLCK      &kp PRINTSCREEN  &trans        &trans        &soft_off       &soft_off       &none           &none      &none  &none  &none
-&trans       &trans        &trans           &trans        &trans        &trans          &none           &kp UP_ARROW    &none      &none  &none  &none
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none  &none  &trans
-                                            &trans        &to 0         &trans          &trans          &trans          &trans
+&bootloader  &kp CLCK      &kp PRINTSCREEN  &trans        &trans        &soft_off       &soft_off  &none   &none   &none  &none  &none
+&trans       &trans        &trans           &trans        &trans        &trans          &none      &trans  &none   &none  &none  &none
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans     &trans  &trans  &none  &none  &trans
+                                            &trans        &to 0         &trans          &trans     &trans  &trans
             >;
 
             label = "Config";
-        };
-
-        layer_7 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
         };
     };
 };
