@@ -158,7 +158,7 @@
 &kp TAB  &kp KP_DIVIDE    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS     &kp PAGE_UP  &none           &kp UP_ARROW    &none            &kp PAGE_DOWN  &kp DELETE
 &trans   &kp KP_MULTIPLY  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS      &kp HOME     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END        &kp C_MENU
 &trans   &kp NUMBER_0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans       &none           &none           &none            &none          &trans
-                                        &kp LGUI      &to 0         &kp SPACE     &kp ENTER    &tog 2          &trans
+                                        &kp LGUI      &to 0         &kp SPACE     &trans       &tog 2          &trans
             >;
         };
 
@@ -174,7 +174,7 @@
 &kp TAB  &kp EXCL  &kp AT  &kp HASH  &kp DLLR      &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp DEL
 &trans   &kp F1    &kp F2  &kp F3    &kp QUESTION  &kp TILDE    &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
 &trans   &kp F4    &kp F5  &kp F6    &trans        &trans       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                           &kp LGUI  &to 1         &kp SPACE    &kp RET    &tog 3     &trans
+                           &kp LGUI  &to 1         &kp SPACE    &trans     &tog 3     &trans
             >;
         };
 
@@ -201,10 +201,10 @@
 
         colemakdh {
             bindings = <
-&trans  &kp Q  &kp W  &kp F   &kp P  &kp G        &kp J      &kp L  &kp U      &kp Y    &trans    &trans
-&trans  &kp A  &kp R  &kp S   &kp T  &kp D        &kp H      &kp N  &kp E      &kp I    &kp O     &trans
-&trans  &kp Z  &kp X  &kp C   &kp V  &kp B        &kp K      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &trans
-                      &trans  &to 0  &kp SPACE    &kp ENTER  &to 6  &trans
+&trans  &kp Q  &kp W  &kp F   &kp P  &kp G        &kp J   &kp L  &kp U      &kp Y    &trans    &trans
+&trans  &kp A  &kp R  &kp S   &kp T  &kp D        &kp H   &kp N  &kp E      &kp I    &kp O     &trans
+&trans  &kp Z  &kp X  &kp C   &kp V  &kp B        &kp K   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &trans
+                      &trans  &to 0  &kp SPACE    &trans  &to 6  &trans
             >;
 
             label = "Colemak-Dh";
@@ -214,7 +214,7 @@
             bindings = <
 &bootloader  &kp CLCK      &kp PRINTSCREEN  &trans        &trans        &soft_off       &soft_off  &none   &none   &none  &none  &none
 &trans       &trans        &trans           &trans        &trans        &trans          &none      &trans  &none   &none  &none  &none
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans     &trans  &trans  &none  &none  &trans
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans     &trans  &trans  &none  &none  &to 5
                                             &trans        &to 0         &trans          &trans     &trans  &trans
             >;
 
